@@ -4,4 +4,9 @@
     <string name="hint_senha">Senha</string>
     <string name="bt_login_entrar">Entrar</string>
     <string name="tv_cadastre">Ainda não tem conta? Cadastre-se</string>
+    <string name="hint_nome">Nome</string>
+    <string name="hint_dt_nascimento">Data nascimento</string>
+    <string name="hint_celular">Celular</string>
+    <string name="hint_conf_senha">Confirmar senha</string>
+    <string name="bt_cadastrar">Cadastrar</string>
 </resources>

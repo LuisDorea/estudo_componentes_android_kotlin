@@ -1,5 +1,6 @@
 package br.com.exemploedittext
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -15,6 +16,19 @@ class MainActivity : AppCompatActivity() {
             if (validarCampos()){
                 Toast.makeText(this, "O e-mail ${et_email_id.text} está logado!", Toast.LENGTH_LONG).show()
             }
+        }
+
+        tv_login_cadastre.setOnClickListener {
+
+            /**
+             * Poderia fazer dessa forma normal com duas linhas
+             *
+             * val intencao = Intent(this, CadastroActivity::class.java)
+             * startActivity(intencao)
+             * **/
+
+            /** Mais com apenas uma linha temos a mesma ação **/
+            startActivity(Intent(this,CadastroActivity::class.java))
         }
     }
 
