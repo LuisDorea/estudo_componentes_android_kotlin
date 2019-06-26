@@ -54,6 +54,12 @@ class CadastroActivity : AppCompatActivity() {
             tudoOk = false
         }
 
+        if (et_cad_senha_id.text.toString() != et_cad_conf_senha_id.text.toString()){
+            et_cad_senha_id.setError("Senhas diferentes")
+            et_cad_conf_senha_id.setError("Senhas diferentes")
+            tudoOk = false
+        }
+
         return tudoOk
     }
 
@@ -64,16 +70,26 @@ class CadastroActivity : AppCompatActivity() {
 
         alertDialog.setPositiveButton("Sim", { _, _ ->
 
-            //Aqui sera executado a instrução a sua escolha
+
             Toast.makeText(this, "Cadastro salvo com sucesso!", Toast.LENGTH_LONG).show()
+            limparCampos()
 
         })
 
         alertDialog.setNegativeButton("Não", { _, _ ->
-            //Aqui sera executado a instrução a sua escolha
+
             Toast.makeText(this, "Usuário cancelou a operação!", Toast.LENGTH_LONG).show()
 
         })
         alertDialog.show()
+    }
+
+    fun limparCampos(){
+        et_nome_id.setText("")
+        et_cad_email_id.setText("")
+        et_dt_nasci_id.setText("")
+        et_cel_id.setText("")
+        et_cad_senha_id.setText("")
+        et_cad_conf_senha_id.setText("")
     }
 }
